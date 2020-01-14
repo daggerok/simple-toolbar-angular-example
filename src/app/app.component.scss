@@ -1,0 +1,43 @@
+.container { }
+
+$primaryBgColor: rgb(173, 16, 215);
+$activeLinkBgColor: darken($primaryBgColor, 5%);
+$primaryColor: #fff5d7;
+
+header#header {
+  display: flex;
+  background-color: $primaryBgColor;
+  color: $primaryColor;
+
+  #banner {
+    padding: 1em;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  ul#menu {
+    display: flex;
+
+    li {
+      padding: 1em;
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: $primaryColor;
+      }
+
+      &:hover {
+        background-color: $activeLinkBgColor;
+      }
+    }
+  }
+}
+
+@media (width: 414px) {
+  ul#menu {
+    padding-right: 1em;
+  }
+}
